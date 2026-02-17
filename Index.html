@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOXSTUDIO</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    text-align:center;
+    background: linear-gradient(135deg,#3f51b5,#e91e63);
+    color:white;
+}
+
+.container{
+    padding:20px;
+}
+
+img{
+    width:300px;
+    margin-top:30px;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:black;
+    color:white;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#222;
+    transform:scale(1.05);
+}
+
+.page{
+    display:none;
+    margin-top:20px;
+}
+
+a{
+    color:white;
+    word-break: break-all;
+}
+</style>
+</head>
+
+<body>
+
+<!-- الصفحة الرئيسية -->
+<div class="container" id="home">
+
+<img src="nox.png" alt="NOXSTUDIO">
+
+<h1>اهلا بك في موقع شركتنا الأساسي</h1>
+
+<button onclick="showInfo()">معلوماتنا</button>
+<button onclick="showSites()">مواقعنا</button>
+
+</div>
+
+
+<!-- صفحة المعلومات -->
+<div class="container page" id="infoPage">
+
+<h2>
+اهلا بك نورتنا وشرفتنا ❤️<br><br>
+اسمنا NOXSTUDIO<br><br>
+وهاذي شركة دوبنا بدينا<br><br>
+اسم المطورين الأساسيين:<br>
+نواف – فواز – عبدالرحمن<br><br>
+المفكر: عبدالرحمن<br>
+الولي مسوي حسابات وينشر: فواز<br>
+اللي سوا بناء الشركه ورئيسه: نواف<br><br>
+قبل التعاون معهم:<br>
+أول واحد تعاون: فواز<br>
+الثاني: عبدالرحمن
+</h2>
+
+<button onclick="goHome()">رجوع</button>
+
+</div>
+
+
+<!-- صفحة المواقع -->
+<div class="container page" id="sitesPage">
+
+<h2>
+الموقع الأول:<br><br>
+<a href="https://noxstudio15-commits.github.io/NOXSTUDIO-MONTAG-/" target="_blank">
+https://noxstudio15-commits.github.io/NOXSTUDIO-MONTAG-/
+</a>
+<br><br><br>
+الموقع الثاني:<br><br>
+<a href="https://noxstudio15-commits.github.io/noxstudio15.github.io/" target="_blank">
+https://noxstudio15-commits.github.io/noxstudio15.github.io/
+</a>
+</h2>
+
+<button onclick="goHome()">رجوع</button>
+
+</div>
+
+
+<script>
+function showInfo(){
+    document.getElementById("home").style.display="none";
+    document.getElementById("infoPage").style.display="block";
+}
+
+function showSites(){
+    document.getElementById("home").style.display="none";
+    document.getElementById("sitesPage").style.display="block";
+}
+
+function goHome(){
+    document.getElementById("home").style.display="block";
+    document.getElementById("infoPage").style.display="none";
+    document.getElementById("sitesPage").style.display="none";
+}
+</script>
+
+</body>
+</html>
